@@ -44,6 +44,9 @@ google-services.json
 google-services-desktop.json
 firebase.json
 *.plist
+Assets/Firebase/Plugins/
+Assets/Firebase/m2repository/
+Assets/GeneratedLocalRepo/
 
 # ========================
 # 환경 설정 파일
