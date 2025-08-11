@@ -3,7 +3,7 @@ using TK.DI;
 using TMPro;
 using UnityEngine;
 
-namespace TK.Firebase.Ch01
+namespace TK.Ch01.Firebase
 {
     /// <summary>
     /// 파이어베이스 연결 상태 보여주는 UI

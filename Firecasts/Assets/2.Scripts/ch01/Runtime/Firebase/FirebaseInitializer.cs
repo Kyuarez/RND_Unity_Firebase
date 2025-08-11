@@ -3,7 +3,7 @@ using Firebase.Analytics;
 using System;
 using UnityEngine;
 
-namespace TK.Firebase.Ch01
+namespace TK.Ch01.Firebase
 {
     /// <summary>
     /// 챕터 1 : 파이어베이스 초기화 클래스 (어널리틱스 연동)
