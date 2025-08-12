@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Threading.Tasks;
 using TK.DI;
 using TK.Ch02.Firebase;

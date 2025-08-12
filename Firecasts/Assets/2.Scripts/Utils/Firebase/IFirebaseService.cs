@@ -1,5 +1,5 @@
 ﻿
-namespace TK.Ch02.Firebase
+namespace TK
 {
     public interface IFirebaseService
     {

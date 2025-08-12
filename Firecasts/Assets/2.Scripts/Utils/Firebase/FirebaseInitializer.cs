@@ -5,7 +5,7 @@ using System;
 using UnityEngine;
 using System.Linq;
 
-namespace TK.Ch02.Firebase
+namespace TK
 {
     public class FirebaseInitializer : MonoBehaviour
     {
