@@ -21,7 +21,7 @@ namespace TK
                 }
             }
 
-
+            //파이어베이스 초기화 후에, 서비스 객체들 초기화 하기. (DefaultInstance 주입)
             FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
             {
                 if(task.Exception != null)
