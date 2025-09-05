@@ -15,6 +15,7 @@ namespace TK.Ch02
         [Header("현재 유저 정보")]
         [SerializeField] UserData m_userData;
 
+
         /// <summary>
         /// 해당 파라미터가 이미 등록되어 있으면 바로 씬 이동, 없으면 등록 후 이동
         /// </summary>
@@ -51,6 +52,22 @@ namespace TK.Ch02
         {
             var data = await m_DBService.GetUserData(nickname);
             m_userData = data;
+        }
+
+        /// <summary>
+        /// DB로부터 data 받아서 세이브 처리
+        /// </summary>
+        /// <param name="nickname"></param>
+        public async Task<bool> SaveUserData()
+        {
+            if(m_userData == null)
+            {
+                return false;
+            }
+
+            m_userData.AddScore();
+            var data = await m_DBService.SaveUserData(m_userData);
+            return true;
         }
     }
 }

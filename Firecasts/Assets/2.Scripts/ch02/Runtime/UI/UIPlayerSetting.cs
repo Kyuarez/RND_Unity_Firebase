@@ -9,16 +9,32 @@ namespace TK.Ch02
     /// <summary>
     /// 챕터2 :: 닉네임을 Firebase Realtime DB에 등록 및 인증
     /// </summary>
-    public class UIPlayerSetting : MonoBehaviour
+    public class UIPlayerSetting : ConUI
     {
         [Inject] private DataManager m_DataManager;
 
         [SerializeField] TMP_InputField m_NicknameField;
         [SerializeField] Button m_RegisterButton;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             m_RegisterButton.onClick.AddListener(OnClickRegisterButton);
+
+            GameManager.Instance().OnChangeGameState += (newState) =>
+            {
+                switch (newState)
+                {
+                    case GameState.Login:
+                        SetActivePanel(true);
+                        break;
+                    case GameState.InGame:
+                        SetActivePanel(false);
+                        break;
+                    default:
+                        break;
+                }
+            };
         }
 
         /// <summary>
@@ -40,11 +56,11 @@ namespace TK.Ch02
 
             if (success) 
             {
-                //TODO : UI 이동
+                GameManager.Instance().SetGameState(GameState.InGame);
             }
             else
             {
-                //TODO : 등록 실패
+                Debug.LogError("등록 실패");
             }
 
             m_RegisterButton.interactable = true;

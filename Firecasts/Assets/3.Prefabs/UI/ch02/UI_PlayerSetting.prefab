@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 4574125334684067442}
   - component: {fileID: 4743286833105520650}
   - component: {fileID: 643256276701376437}
+  - component: {fileID: 8876091376028264070}
   - component: {fileID: 3947439674320979043}
   m_Layer: 0
   m_Name: UI_PlayerSetting
@@ -433,6 +434,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!225 &8876091376028264070
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932358298542607568}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &3947439674320979043
 MonoBehaviour:
   m_ObjectHideFlags: 0

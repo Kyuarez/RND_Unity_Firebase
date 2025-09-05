@@ -2,7 +2,8 @@
   "project_info": {
     "project_number": "1044584595707",
     "project_id": "rnd-firecasts",
-    "storage_bucket": "rnd-firecasts.firebasestorage.app"
+    "storage_bucket": "rnd-firecasts.firebasestorage.app",
+    "firebase_url": "https://rnd-firecasts-default-rtdb.firebaseio.com/",
   },
   "client": [
     {

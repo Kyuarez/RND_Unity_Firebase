@@ -14,5 +14,10 @@ namespace TK.Ch02
             NickName = nickname;
             Score = score;
         }
+
+        public void AddScore()
+        {
+            Score++;
+        }
     }
 }

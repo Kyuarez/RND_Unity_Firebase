@@ -1,7 +1,8 @@
+using Firebase;
 using Firebase.Database;
 using System.Threading.Tasks;
-using Unity.Mathematics;
 using UnityEngine;
+using System;
 
 namespace TK.Ch02.Firebase
 {
@@ -11,14 +12,12 @@ namespace TK.Ch02.Firebase
     public class FirebaseDBService : MonoBehaviour, IFirebaseService
     {
         private const string User_KEY = "Users";
-
-        private FirebaseDatabase m_Database;
         private DatabaseReference m_UsersRoot;
+
 
         public void Initialize()
         {
-            m_Database = FirebaseDatabase.DefaultInstance;
-            m_UsersRoot = m_Database.GetReference(User_KEY);
+            m_UsersRoot = FirebaseDatabase.DefaultInstance.GetReference(User_KEY);
         }
 
         /// <summary>
